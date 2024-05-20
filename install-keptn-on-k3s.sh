@@ -795,8 +795,8 @@ function main {
     --letsencrypt)
         echo "Will try to create LetsEncrypt certs"
         CERTS="letsencrypt"
-        if [[ "$CERT_EMAIL" == "harishr0312@gmail.com" ]]; then
-          echo "Enabling LetsEncrpyt Support requires you to set CERT_EMAIL"
+        if [[ "$OWNER_EMAIL" == "" ]]; then
+          echo "Enabling LetsEncrpyt Support requires you to set OWNER_EMAIL"
           exit 1
         fi
         if [[ "$LE_STAGE" != "production" ]]; then
